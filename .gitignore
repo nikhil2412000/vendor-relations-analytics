@@ -1,7 +1,7 @@
 *.csv
 *.csv
 .venv
-/logs
+/logs/*
 .ipynb_checkpoints
 __pycache__/
 .DS_Store
