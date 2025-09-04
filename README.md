@@ -48,17 +48,13 @@ Insights & Recommendations
 - sales  
 - vendor_sales_summary  
 
-**5. Project Structure**  
-- **Exploratory_Data_Analysis.ipynb** – Data cleaning, preparation, and initial analysis.  
-- **vendor_performance_analysis.ipynb** – KPI calculation and vendor performance assessment.  
+**5. Methodology**  
 
-**6. Methodology**  
-
-**6.1 Data Cleaning**  
+**5.1 Data Cleaning**  
 - Removed missing or inconsistent values.  
 - Converted critical columns (e.g., ProfitMargin) to numeric formats.  
 
-**6.2 Analysis**  
+**5.2 Analysis**  
 - Performed statistical summaries and distributions.  
 - Grouped data by vendor and product categories.  
 - Filtered to include vendors with:  
@@ -66,26 +62,26 @@ Insights & Recommendations
   - Positive Profit Margin  
   - Positive Sales Quantity  
 
-**6.3 KPI Metrics**  
+**5.3 KPI Metrics**  
 - Mean Profit Margin  
 - Total Gross Profit  
 - Total Sales Quantity  
 
-**7. Insights & Findings**  
+**6. Insights & Findings**  
 - **High-performing vendors**: Strong margins and stable sales.  
 - **Underperforming vendors**: High volume but weak profit margins.  
 - **Optimal pricing zone**: Mid-range purchase prices deliver higher returns.  
 
-**8. Technology Stack**  
+**7. Technology Stack**  
 - **Programming Language**: Python 3.8+  
 - **Libraries**:  
   - pandas, NumPy – Data processing and analysis  
   - Matplotlib, Seaborn – Visualization  
   - SQLAlchemy / SQLite – Database integration  
 
-**9. Usage**  
+**8. Usage**  
 
-**9.1 Clone Repository**  
+**8.1 Clone Repository**  
 ```bash
 git clone https://github.com/your-repo/vendor-sales-analysis.git
 cd vendor-sales-analysis
