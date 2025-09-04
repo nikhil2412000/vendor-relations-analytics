@@ -40,6 +40,7 @@ Exploratory Data Analysis (EDA)
 Vendor KPI Calculation
 ↓
 Insights & Recommendations
+
 **4.2 Data Sources**  
 - purchases  
 - purchase_prices  
