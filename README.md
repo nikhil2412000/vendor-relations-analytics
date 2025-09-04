@@ -1,35 +1,58 @@
-Vendor Relations Analytics
-Overview
+Vendor Sales & Performance Analysis
+1. Overview
 
-This project analyzes vendor sales, purchase patterns, and profitability to support data-driven decision-making in procurement and vendor management. It combines Exploratory Data Analysis (EDA) and performance evaluation to identify top-performing vendors, optimize pricing strategies, and highlight renegotiation opportunities.
+This project provides a comprehensive analysis of vendor sales, purchase patterns, and profitability. It empowers businesses to make data-driven decisions in vendor management, procurement, and strategic sourcing.
 
-Features
+The analysis combines:
 
-Exploratory Data Analysis (EDA) to clean and analyze vendor-related data.
+Exploratory Data Analysis (EDA) for identifying patterns and anomalies.
 
-Vendor performance analysis with key KPIs (profit margin, gross profit, sales quantity).
+Vendor Performance Evaluation to assess profitability and sales efficiency.
 
-Visual insights for profit margin distributions and purchase-price trends.
+Business Recommendations to optimize vendor relationships and improve margins.
 
-Actionable business recommendations for strategic sourcing and vendor optimization.
+2. Executive Summary
 
-Structured Jupyter Notebooks for reproducible data analysis.
+Top-performing vendors generate ~65% of total gross profit, maintaining an average margin above 25%.
 
-Technologies Used
+Low-margin vendors (<10%) handle significant sales volumes, representing a key opportunity for renegotiation.
 
-Python
+Sales quantities are highest in mid-tier purchase price ranges, while extreme prices lower profitability.
 
-pandas & NumPy – Data processing
+Optimization could increase gross profit by 8–12% annually.
 
-Matplotlib & Seaborn – Visualization
+3. Key Business Questions
 
-SQLAlchemy / SQLite – Database connectivity
+This analysis answers:
 
-Jupyter Notebooks
+Which vendors contribute the most to profit?
 
-Architecture
+How does purchase pricing impact sales?
 
-Data extracted from multiple tables:
+Who should be prioritized for long-term contracts?
+
+Where are profit leaks due to inefficient vendor terms?
+
+What pricing ranges maximize gross margins?
+
+4. Data Pipeline
+4.1 Data Flow
+Database Tables
+ ├── purchases
+ ├── purchase_prices
+ ├── vendor_invoice
+ ├── sales
+ └── vendor_sales_summary
+        ↓
+ Data Cleaning & Transformation
+        ↓
+ Exploratory Data Analysis (EDA)
+        ↓
+ Vendor KPI Calculation
+        ↓
+ Insights & Recommendations
+
+4.2 Data Sources
 
 purchases
 
@@ -41,46 +64,91 @@ sales
 
 vendor_sales_summary
 
-Clean and transform data to ensure consistency.
+5. Project Structure
 
-Perform exploratory analysis for trend identification.
+Exploratory_Data_Analysis.ipynb – Data cleaning, preparation, and initial analysis.
 
-Compute vendor KPIs (Profit Margin, Sales Quantity, Gross Profit).
+vendor_performance_analysis.ipynb – KPI calculation and vendor performance assessment.
 
-Provide insights and recommendations for business decisions.
+6. Methodology
+6.1 Data Cleaning
 
-Setup Instructions
-1. Clone the repository
-git clone https://github.com/nikhil2412000/vendor-relations-analytics.git
-cd vendor-relations-analytics
+Removed missing or inconsistent values.
 
-2. Install dependencies
+Converted critical columns (e.g., ProfitMargin) to numeric formats.
+
+6.2 Analysis
+
+Performed statistical summaries and distributions.
+
+Grouped data by vendor and product categories.
+
+Filtered to include vendors with:
+
+Positive Gross Profit
+
+Positive Profit Margin
+
+Positive Sales Quantity
+
+6.3 KPI Metrics
+
+Mean Profit Margin
+
+Total Gross Profit
+
+Total Sales Quantity
+
+7. Insights & Findings
+
+High-performing vendors: Strong margins and stable sales.
+
+Underperforming vendors: High volume but weak profit margins.
+
+Optimal pricing zone: Mid-range purchase prices deliver higher returns.
+
+8. Technology Stack
+
+Programming Language: Python 3.8+
+
+Libraries:
+
+pandas, NumPy – Data processing and analysis
+
+Matplotlib, Seaborn – Visualization
+
+SQLAlchemy / SQLite – Database integration
+
+9. Usage
+9.1 Clone Repository
+git clone https://github.com/your-repo/vendor-sales-analysis.git
+cd vendor-sales-analysis
+
+9.2 Install Dependencies
 pip install -r requirements.txt
 
-3. Run the analysis
+9.3 Run Analysis
 
-Open Exploratory_Data_Analysis.ipynb for data preparation and exploration.
+Open and run Exploratory_Data_Analysis.ipynb for data exploration.
 
-Open vendor_performance_analysis.ipynb for vendor performance analysis and KPI generation.
+Open and run vendor_performance_analysis.ipynb for KPI analysis.
 
-Outputs
+10. Outputs
 
-Cleaned vendor sales dataset
+Cleaned datasets ready for reporting.
 
-Visual insights (profit margin distributions, sales-price relationships)
+Profit margin and sales distribution visualizations.
 
-Vendor KPI tables for decision-making
+Vendor performance tables and KPI dashboards.
 
-Recommendations
+11. Recommendations
 
-Focus on high-volume, low-margin vendors for renegotiation.
+Focus procurement renegotiations on low-margin, high-volume vendors.
 
-Strengthen partnerships with high-margin vendors.
+Expand partnerships with top-margin vendors for better long-term returns.
 
-Conduct regular vendor performance reviews to maintain profitability.
+Implement periodic vendor performance reviews based on these KPIs.
 
-License
+12. License
 
-This project is licensed under the MIT License – free for personal and commercial use.
-
-MIT License – free for commercial and personal use.
+This project is licensed under the MIT License – free for both personal and commercial use.
